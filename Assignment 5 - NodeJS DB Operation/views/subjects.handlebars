@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-sm-5 ">
+                            <h4 class="title">Subjects <span>List</span></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                                <th>Institute Name</th>
+                                <th>Department Name</th>
+                                <th>Semester</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each subjects}}
+                            <tr>
+                                <td>{{this.code}}</td>
+                                <td>{{this.name}}</td>
+                                <td>{{this.instName}}</td>
+                                <td>{{this.deptName}}</td>
+                                <td>{{this.sem}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/subject" class="form-button">
+    <button id="submit" type="submit" class="btn btn-primary">Add Subject</button>
+</a>
